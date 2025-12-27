@@ -1,0 +1,234 @@
+:root {
+	--bg: #0f1724; /* dark slate */
+	--card: #ffffff;
+	--muted: #6b7280;
+	--accent: #0ea5ff;
+	--brand: #004aad;
+	--accent-2: #0b84d6;
+	--max-width: 1100px;
+	--gap: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg, #071023 0%, var(--bg) 100%);
+	color: #e6eef8;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.skip-link:focus {
+	left: 1rem;
+	top: 1rem;
+	width: auto;
+	height: auto;
+	background: #000;
+	color: #fff;
+	padding: 0.5rem 0.75rem;
+	border-radius: 4px;
+	z-index: 1000;
+}
+
+.site-header {
+	padding: 2rem 0 1rem;
+	border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.site-header { position: relative; overflow: visible; /* show header background image */ background-repeat: no-repeat; background-position: right 12px top 18px; background-size: 320px auto; padding-bottom: 2.25rem }
+.site-header .container { position: relative; z-index: 1 }
+.header-logo { display: none; /* hidden because we use the background image for the header */ }
+
+
+.site-title { margin: 0; font-size: 1.6rem; color: var(--card); letter-spacing: 0.2px }
+.site-subtitle { margin: 0.25rem 0 1rem; color: var(--muted); font-size: 0.95rem }
+
+.site-nav { display: flex; gap: var(--gap); justify-content: center; flex-wrap: wrap }
+.ite-nav a, .site-nav a { color: var(--accent); text-decoration: none; font-weight: 600 }
+.site-nav a:hover { color: var(--accent-2); text-decoration: underline }
+
+.button { display: inline-block; background: var(--accent); color: white; padding: 0.6rem 0.9rem; border-radius: 8px; text-decoration: none; font-weight: 600 }
+.button.big { padding: 0.9rem 1.25rem; font-size: 1rem }
+.button:hover { background: var(--accent-2) }
+
+section {
+	background: var(--card);
+	color: #0b1220;
+	margin: 2rem auto;
+	padding: 1.75rem;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(2,6,23,0.35);
+	width: calc(100% - 2rem);
+	max-width: var(--max-width);
+}
+
+.site-header + section { margin-top: 1.75rem }
+.site-header .container, .container { display: block }
+
+.mi-foto {
+	width: 170px;
+	height: 170px;
+	object-fit: cover;
+	border-radius: 14px;
+	display: block;
+	margin: 0.5rem auto 1rem;
+	border: 6px solid rgba(0,74,173,0.08);
+	box-shadow: 0 12px 30px rgba(2,6,23,0.35);
+}
+
+/* Sobre-mi image layout */
+#sobre-mi .image { float: left; margin-right: 1.25rem }
+#sobre-mi .mi-foto { width: 180px; height: 180px }
+
+@media (max-width: 720px) {
+	#sobre-mi .image { float: none; text-align: center; margin-right: 0 }
+	#sobre-mi .mi-foto { margin: 0.5rem auto 1rem }
+}
+
+
+#cuaderno .semana { margin-bottom: 1.25rem; padding: 1rem 1.25rem; border-radius: 10px; background: linear-gradient(180deg,#fbfdff, #f1f7ff); box-shadow: 0 6px 18px rgba(6,30,80,0.06) }
+
+#cuaderno h3 { color: var(--brand); margin: 0 0 0.5rem 0; font-size: 1.05rem }
+#cuaderno p { color: #243044; line-height: 1.5 }
+#cuaderno ul { margin: 0.5rem 0 0 1.1rem }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem }
+.skills-points { list-style: none; padding: 0; margin: 0.75rem 0 1rem; display: flex; gap: 0.75rem; justify-content: space-between }
+.skills-points li { flex: 1 1 0; background: linear-gradient(180deg,#fff,#f7fbff); padding: 0.6rem 0.9rem; border-radius: 10px; text-align: center; color: #08345a; font-weight: 700; box-shadow: 0 6px 18px rgba(6,30,80,0.04) }
+.skills-points li + li { margin-left: 0 }
+.features article { display:flex; gap: 0.75rem; align-items:flex-start }
+.features .icon { font-size: 1.6rem; color: var(--accent) }
+
+.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem }
+.posts article { background: linear-gradient(180deg,#fff,#fbfdff); padding: 1rem; border-radius: 10px; box-shadow: 0 6px 18px rgba(6,30,80,0.06) }
+
+.contact { list-style: none; padding: 0; margin: 0 }
+.contact li { margin-bottom: 0.5rem }
+
+/* Cuaderno selector */
+.cuaderno-menu { display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:flex-start; margin-bottom:1rem }
+.cuaderno-menu button { background: transparent; border: 1px solid rgba(0,74,173,0.12); padding:0.45rem 0.7rem; border-radius:8px; cursor:pointer; color:var(--brand); font-weight:600 }
+.cuaderno-menu button.active { background: var(--brand); color:white; border-color: var(--brand) }
+.cuaderno-menu select { padding:0.45rem 0.6rem; border-radius:8px; border:1px solid rgba(0,0,0,0.08) }
+
+/* When only one week is visible, center it */
+.semanas { display:block }
+.semana { max-width: 900px; margin-left:auto; margin-right:auto }
+
+/* Sobre mí presentation */
+.nombre-presentacion { font-size: 1.15rem; color: #07123a; margin: 0.25rem 0 0 }
+.institucion { color: var(--muted); margin: 0.1rem 0 0.75rem; font-weight:600 }
+
+/* Banner welcome layout */
+.banner-welcome { padding: 2rem 0; background: linear-gradient(180deg, transparent 0%, transparent 100%); box-shadow: none }
+.banner-grid { display: block }
+
+/* Intro card that groups welcome text and hero image */
+.intro-card { background: var(--card); color: #0b1220; border-radius: 12px; padding: 1.25rem; display: grid; grid-template-columns: 1fr minmax(220px,420px); gap: 1.25rem; align-items: center; box-shadow: 0 12px 36px rgba(2,6,23,0.12) }
+.intro-text { min-width: 0 }
+.intro-img { text-align: right }
+.intro-img .hero-img { border-radius: 10px; max-height: 520px; width: 100%; object-fit: cover }
+.banner-welcome .lead { font-size: 1.05rem; color: var(--brand); margin: 0 }
+.highlight-box {
+	background: #ffffff; /* solid white to clearly separate sections */
+	color: #0b1220;
+	border-left: 4px solid var(--brand);
+	padding: 1.1rem 1.25rem;
+	margin: 0.85rem 0;
+	border-radius: 10px;
+	position: relative;
+	z-index: 3;
+	box-shadow: 0 8px 24px rgba(2,6,23,0.12);
+}
+.hero-image { text-align: right; max-width: 420px }
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover; /* antes estaba contain → esto evita bordes vacíos y mejora la nitidez */
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(2,6,23,0.35);
+  
+  /* --- Ajustes para mejorar la claridad --- */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@media (max-width: 920px) {
+	.banner-grid { display: block }
+	.intro-card { grid-template-columns: 1fr; }
+	.intro-img { text-align: center; margin-top: 1rem }
+	.intro-img .hero-img { max-width: 360px; margin: 0 auto }
+
+}
+@media (max-width: 720px) {
+	.banner-grid { grid-template-columns: 1fr; }
+	.hero-image { text-align: center; margin-top: 1rem }
+	.hero-img { max-width: 360px; height: auto; object-fit: cover }
+
+	/* Stack skill points on small screens */
+	.skills-points { flex-direction: column; gap: 0.6rem }
+	.skills-points li { text-align: left }
+}
+
+/* Improve hero image scaling on wide screens */
+@media (min-width: 921px) {
+	.hero-img { max-height: 520px; object-fit: cover }
+}
+
+/* Fade-in transition for semana */
+.semana { opacity: 1; transform: none }
+.semana.show { opacity: 1 }
+
+.add-link { background: linear-gradient(90deg,var(--brand),var(--accent-2)); color: #fff; padding:0.45rem 0.75rem; border-radius:8px; border: none; cursor:pointer; font-weight:700 }
+.add-link:hover { filter: brightness(0.95) }
+
+.enlaces-list { margin-top:0.5rem }
+.enlaces-list li { margin-bottom:0.35rem }
+.enlaces-list a { color: var(--accent); text-decoration: underline }
+
+.cuaderno-menu button:focus { outline: 3px solid rgba(14,165,255,0.12); outline-offset: 2px }
+
+a { color: var(--accent); text-decoration: none }
+
+a:hover { text-decoration: underline }
+
+footer {
+	background: transparent;
+	color: var(--muted);
+	text-align: center;
+	padding: 2rem 1rem;
+	margin-top: 2rem;
+}
+
+@media (min-width: 720px) {
+	.site-nav { justify-content: center }
+	section { padding: 2rem }
+}
+
+@media (max-width: 480px) {
+	.site-title { font-size: 1.25rem }
+	.mi-foto { width: 120px; height: 120px }
+	/* ensure header background doesn't overcrowd small screens */
+	.site-header { background-size: 220px auto; background-position: center right; }
+}

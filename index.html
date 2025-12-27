@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portafolio de Miguel Angel Hinostroza Meza — proyectos, cuaderno de aprendizaje y reflexiones sobre desarrollo web." />
+    <title>MI PORTAFOLIO WEB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+		<a class="skip-link" href="#main">Saltar al contenido</a>
+
+		<header class="site-header" style="background-image: url('Imagenes/imagen02uni.png');">
+			<div class="container">
+				<img src="uncp-logo.png" alt="UNCP" class="header-logo" />
+				<h1 class="site-title">MI PORTAFOLIO WEB</h1>
+				<p class="site-subtitle">Miguel Angel Hinostroza Meza — Estudiante de Ingeniería de Sistemas</p>
+				<nav class="site-nav" aria-label="Principal">
+					<a href="#sobre-mi">Sobre mí</a>
+					<a href="#proyectos">Proyectos</a>
+					<a href="#cuaderno">Cuaderno</a>
+					<a href="#reflexion-final">Reflexión</a>
+					<a href="#contacto">Contacto</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main">
+			<!-- Banner -->
+	 		<section id="banner" class="banner-welcome">
+	 			<div class="container">
+	 				<div class="intro-card">
+	 					<div class="intro-text">
+	 						<header>
+	 							<h2>Bienvenido</h2>
+	 							<p class="lead">A mi portafolio web</p>
+	 						</header>
+	 						<p>Gracias por visitar mi portafolio. Aquí muestro proyectos, aprendizajes y reflexiones sobre desarrollo web. Mi objetivo es crear aplicaciones accesibles, eficientes y centradas en el usuario.</p>
+
+	 						<div class="highlight-box">
+	 							<strong>Importancia de un Ingeniero de Sistemas</strong>
+	 							<p>Los ingenieros de sistemas diseñamos y construimos soluciones tecnológicas que automatizan procesos, permiten la toma de decisiones basada en datos y mejoran la experiencia de usuarios y clientes. Nuestro trabajo conecta requisitos de negocio con implementaciones técnicas seguras, escalables y eficientes.</p>
+
+	 							<p>Responsabilidades y valores clave:</p>
+	 							<ul>
+	 								<li>Resolver problemas reales mediante software confiable y mantenible.</li>
+	 								<li>Priorizar la experiencia del usuario, rendimiento y seguridad.</li>
+	 								<li>Trabajar colaborativamente con equipos multidisciplinares (diseño, producto, datos).</li>
+	 								<li>Adoptar buenas prácticas y estándares para facilitar escalabilidad y mantenibilidad.</li>
+	 							</ul>
+	 						</div>
+	 					</div>
+	 					<div class="intro-img">
+		 					<img src="Imagenes/imagen01web.webp" alt="Bienvenida" class="hero-img" />
+	 					</div>
+	 				</div>
+	 			</div>
+	 		</section>
+
+			<!-- Sobre mí (presentación clara) -->
+			<section id="sobre-mi">
+				<div class="container">
+					<div class="image object">
+	 					<img src="Imagenes/imagen03MIA.jpeg" alt="Miguel Angel Hinostroza Meza" class="mi-foto" />
+					</div>
+					<h2>Sobre mí</h2>
+					<p class="nombre-presentacion"><strong>Miguel Angel Hinostroza Meza</strong></p>
+					<p class="institucion">Universidad Nacional del Centro del Perú — Estudiante de Ingeniería de Sistemas</p>
+					<p>Soy estudiante de noveno semestre de la carrera de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú (UNCP), sede Huancayo. Estoy muy interesado en aprender desarrollo web y en la aplicación e implementación de inteligencia artificial en distintos campos tecnológicos. En este portafolio comparto mis avances, proyectos y reflexiones sobre esas áreas.</p>
+				</div>
+			</section>
+
+			<!-- Habilidades y competencias -->
+			<section>
+				<header class="major">
+					<h2>Habilidades y competencias</h2>
+				</header>
+				<p class="lead">A continuación se muestran las habilidades y competencias que se espera desarrollar a lo largo del curso: tanto habilidades técnicas como competencias profesionales.</p>
+				<div class="container">
+					<ul class="skills-points">
+						<li>Habilidades técnicas (HTML, CSS, JavaScript)</li>
+						<li>Competencias profesionales (trabajo en equipo, comunicación)</li>
+						<li>Gestión de proyectos y control de versiones (Git)</li>
+						<li>Aprendizaje continuo y ética profesional</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Proyectos -->
+			<section id="proyectos">
+				<header class="major">
+					<h2>Proyectos destacados</h2>
+				</header>
+				<div class="posts container">
+					<article>
+						<h3>Proyecto: Sistema Web Inteligente para Clasificación de Patentes (PyPatentAlice)</h3>
+						<p>Se desarrolló de forma grupal y para el parcial final del curso, una aplicación web inteligente full stack orientada al análisis automático de textos legales de patentes, basada en Inteligencia Artificial y Procesamiento de Lenguaje Natural (NLP). El sistema clasifica reivindicaciones de patentes según su posible no patentabilidad bajo el criterio de la decisión Alice v. CLS Bank.</p>
+						<p>El backend fue implementado en Python (Flask) bajo una arquitectura cliente–servidor en capas, integrando un modelo de Machine Learning supervisado (SVM + TF-IDF) para clasificación binaria de texto. Se incorporó autenticación segura con JWT, persistencia en MySQL y una API REST para análisis y gestión de usuarios.</p>
+						<p>El frontend fue desarrollado en React, siguiendo una arquitectura basada en componentes, con una interfaz limpia, responsive y orientada a la experiencia de usuario. Permite el ingreso de texto, visualización de resultados, manejo de sesiones y consulta de historiales de análisis.</p>
+						<p>Este proyecto consolida mis conocimientos en desarrollo web backend y frontend, seguridad, arquitectura de software e integración de modelos de IA en aplicaciones reales, aplicando buenas prácticas de escalabilidad, mantenibilidad y ética en sistemas inteligentes.</p>
+						<ul class="actions"><li><a href="https://github.com/tuusuario/pyPatentAlice" target="_blank" class="button">Ver en GitHub</a></li></ul>
+					</article>
+				</div>
+			</section>
+
+			<!-- Cuaderno de aprendizaje (poblado por script.js) -->
+			<section id="cuaderno">
+				<header class="major"><h2>Cuaderno de Aprendizaje</h2></header>
+						<div class="container">
+							<!-- menú generado por JS: botones / select -->
+							<div id="cuaderno-menu" class="cuaderno-menu" aria-label="Seleccionar semana"></div>
+							<div class="semanas" aria-live="polite"></div>
+						</div>
+			</section>
+
+			<!-- Reflexión final -->
+			<section id="reflexion-final">
+				<header class="major"><h2>Reflexión</h2></header>
+				<p>Durante este curso he ido construyendo una base práctica y reflexiva: el <strong>cuaderno de aprendizaje</strong> contiene temas, descripciones y mis propias <em>definiciones</em>, <em>procedimientos</em> y <em>detalles</em> de trabajo que me ayudan a consolidar lo aprendido. Estos elementos me permiten recordar pasos concretos, justificar decisiones técnicas y evaluar mi progreso.</p>
+				<p>Mi objetivo es combinar conocimientos técnicos con buenas prácticas de diseño para crear interfaces útiles, accesibles y mantenibles. Los compromisos que guían mi aprendizaje incluyen: practicar la semántica y accesibilidad en cada ejercicio; estructurar estilos y componentes de forma coherente; aplicar control de versiones en todos los proyectos; y documentar cada entrega con reflexiones y enlaces relevantes.</p>
+				<p>A futuro planeo integrar pequeñas pruebas automatizadas, persistir los recursos del cuaderno (por ejemplo usando <code>localStorage</code> o un repositorio) y construir un proyecto final que reúna HTML, CSS, JavaScript/React y buenas prácticas de accesibilidad.</p>
+			</section>
+
+			<!-- Bibliografía / Recursos -->
+			<section id="bibliografia">
+				<header class="major"><h2>Recursos y Bibliografía</h2></header>
+				<ul>
+					<li>MDN Web Docs — referencia completa de HTML, CSS y JavaScript: <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">https://developer.mozilla.org/es/</a></li>
+					<li>freeCodeCamp — tutoriales prácticos y ejercicios: <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">https://www.freecodecamp.org/</a></li>
+					<li>JavaScript.info — guía moderna y detallada de JavaScript: <a href="https://javascript.info/" target="_blank" rel="noopener">https://javascript.info/</a></li>
+					<li>React — documentación oficial y guías: <a href="https://react.dev/" target="_blank" rel="noopener">https://react.dev/</a></li>
+					<li>TypeScript — documentación y handbook: <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">https://www.typescriptlang.org/</a></li>
+					<li>Git — documentación oficial y buenas prácticas de control de versiones: <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></li>
+					<li>WAI-ARIA & Web Accessibility — pautas para accesibilidad web: <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">https://www.w3.org/WAI/</a></li>
+					<li>CSS-Tricks — artículos y guías prácticas sobre CSS: <a href="https://css-tricks.com/" target="_blank" rel="noopener">https://css-tricks.com/</a></li>
+					<li>Eloquent JavaScript (Marijn Haverbeke) — libro interactivo para profundizar en JavaScript: <a href="https://eloquentjavascript.net/" target="_blank" rel="noopener">https://eloquentjavascript.net/</a></li>
+					<li>You Don't Know JS (Kyle Simpson) — serie de libros sobre JavaScript (disponible en GitHub): <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener">https://github.com/getify/You-Dont-Know-JS</a></li>
+					<li>Bootstrap — componentes y patrones para prototipado rápido: <a href="https://getbootstrap.com/" target="_blank" rel="noopener">https://getbootstrap.com/</a></li>
+					<li>Tailwind CSS — utilidades para diseño rápido y consistente: <a href="https://tailwindcss.com/" target="_blank" rel="noopener">https://tailwindcss.com/</a></li>
+					<li>Node.js — para entender entornos de ejecución y herramientas de front-end: <a href="https://nodejs.org/" target="_blank" rel="noopener">https://nodejs.org/</a></li>
+					<li>Repositorio de ejemplo y monografía (proyecto personal): <a href="https://github.com/tuusuario/monografia-html" target="_blank" rel="noopener">https://github.com/tuusuario/monografia-html</a></li>
+				</ul>
+			</section>
+
+			<!-- Contacto -->
+			<section id="contacto">
+				<header class="major"><h2>Contacto</h2></header>
+				<p>Puedes escribirme a: <a href="mailto:xxmygel96xx@gamil.com">xxmygel96xx@gamil.com</a> — o visitar mi perfil en GitHub.</p>
+				<ul class="contact">
+					<li class="icon solid fa-envelope"><a href="mailto:xxmygel96xx@gamil.com">xxmygel96xx@gamil.com</a></li>
+					<li class="icon solid fa-phone">962951104</li>
+				</ul>
+			</section>
+
+			<footer>
+				<p>© 2025 Miguel Angel Hinostroza Meza | Portafolio Electrónico</p>
+			</footer>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
